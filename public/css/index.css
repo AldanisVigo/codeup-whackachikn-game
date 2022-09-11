@@ -1,0 +1,35 @@
+body{
+    background: white;
+    padding: 0;
+    margin: 0;
+}
+
+#whackachicken{
+    height: 80vh;
+    width : 100vw;
+    background: red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows : 1fr 1fr 1fr;
+}
+
+.whackabutton{
+    background: red;
+    width: 100%;
+    height: 100%;
+}
+
+.chicken{
+    background: url('/img/chikn.png');
+    background-size: cover;
+}
+
+#title{
+    font-size: xx-large;
+    text-align: center;
+}
+
+#score{
+    font-size: x-large;
+    text-align: center;
+}
