@@ -23,18 +23,33 @@ let timer = null;
     Function to check for win or increase the score
 */
 const increaseScore = () => {
+    //If the score is the winning score minus one
     if(score == winningScore - 1){
+        //Clear the randomizer timer
         clearInterval(timer)
+        
+        //Confirm wether the user wants to restart the game and let them know they won
         let confirmRestart = confirm("Youz a weener Yaayyyy! Would you like to play again?")
+        
+        //If they choose to restart the game
         if(confirmRestart){
+            //Clear the score back to 0
             score = 0;
+
+            //And display it
             score_container.innerText = "Score : 0"
+
+            //Start the chicken randomizer timer again
             startChickenRandomizer()
-        }else{
+        }else{ //Otherwise
+
+            //Say goodbye burger!
             alert("Alrighty. Goodbye burger!")
         }
-    }else{
-        score++
+    }else{ //Otherwise
+        score++ //Increase the score by 1
+        
+        //And display the new score
         score_container.innerText = `Score : ${score}`
     }
 }
